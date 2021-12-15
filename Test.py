@@ -657,7 +657,7 @@ elif "RFM" in report:
     tm = pd.to_datetime(st.sidebar.date_input("Select Date"))
     field = st.sidebar.selectbox("Select a Field",
                                  options=data.select_dtypes(exclude=['float64', 'datetime64[ns]', 'int64']).columns)
-    variable = st.sidebar.selectbox("Select a Filter", options=['Item', 'Shipping_City'])
+    variable = st.sidebar.selectbox("Select a Filter", options=data.select_dtypes(exclude=['float64', 'datetime64[ns]', 'int64']).columns)
     val = st.sidebar.selectbox('Select a value', options=data[variable].value_counts().index)
     result = rfm(data, field, variable, val, tm)
     col1, col2, col3 = st.columns(3)
