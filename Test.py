@@ -88,7 +88,7 @@ def rfm(dataframe, col, col1, col_value, y):
     return rfm.sort_values(by='Rating')
 
 
-data = pd.read_csv(r"https://raw.githubusercontent.com/Ajaybabuds/Worktest/main/Store.csv", quotechar='"', encoding='utf-8', low_memory=False)
+data = pd.read_csv("https://4809897.app.netsuite.com/core/media/media.nl?id=7472655&c=4809897&h=Pve73pI_qvxpMNEfP9MAmhvo5-PlX4301Yy5Jr1Bw7t6BmKq&_xt=.csv%27", quotechar='"', encoding='utf-8', low_memory=False)
 data = data.iloc[:, 1:]
 data = data.loc[data['Customer'].str.contains('Test') == False]
 data = sfr(date_clean(data))
