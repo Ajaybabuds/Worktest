@@ -6,7 +6,6 @@ from statsmodels.tsa.ar_model import AutoReg
 import warnings
 
 warnings.filterwarnings('ignore')
-st.beta_set_page_config(page_title='J & Y')
 st.title("Welcome to NetScore Analytics")
 c_yr = datetime.today().year
 
